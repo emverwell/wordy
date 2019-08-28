@@ -50,7 +50,7 @@ def main():
         #Convert Counter to a simple Dict
         report = dict(c)
         #Comprehension for printing out required values
-        print({k:v for (k,v) in sorted(report.items(), reverse=True) if v >= min_value})
+        print({k:v for (k,v) in sorted(report.items(), key=operator.itemgetter(1), reverse=True) if v >= min_value})
 
     except OSError as e:
         print('Wordy Severe Error: ' + str(e))
