@@ -2,7 +2,7 @@ from argparse import ArgumentParser
 from collections import Counter
 import os, re
 
-dirpath = os.path.realpath(__file__)
+dirpath = os.path.dirname(os.path.realpath(__file__))
 
 def removing_stop_words(raw_list):
     '''Get the stop words list and return a cleaned list'''
